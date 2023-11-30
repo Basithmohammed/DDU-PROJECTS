@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Button</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .container{
+            width: 13.5em;
+            background-color: rgb(60, 49, 49);
+            padding: 1.4em 3.75em;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%;
+            border-radius: 0.7em;
+            display: flex;
+            flex-direction: column;
+            box-shadow:5px 5px rgba(212, 234, 255, 0.2);
+        }
+        #message-ref{
+            font-size:0.9em;
+            color: #34bd34;
+            margin-top: 1.5em;
+            /* visibility: hidden; */
+        }
+        input{
+            width: 280px;
+            height: 40px;
+            align-items: center;
+            border: 0;
+            border-radius: 3px;
+        }
+        button{
+            width: 100px;
+            height: 40px;
+            margin-left: 100px;
+            border-radius: 0.75rem;
+        }
+        h2{
+            margin-left: 25%;
+        }
+        #submit:hover{
+            background-color: gray;
+        }
+        input:focus{
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Login Page</h2>
+        <input type="text" placeholder="Username" id="username" minlength="5"/><br>
+        <input type="password" placeholder="password" id="password"/><br>
+        <button id="submit" onmouseover="mouseOver()">Submit</button>
+        <p id="message-ref">Signed Up Successfully!</p>
+    </div>
+    <script>
+        // usernameRef.addEventListener("input",() =>{
+        //     if(!isUsernameValid()){
+        //         messageRef.style.visibility="hidden";
+        //         usernameRef.style.cssText = "border-color: #fe2e2e; background-color:#ffc2c2";
+        //     }
+        //     else{
+        //         usernameRef.style.cssText = "border-color: #34bd34; background-color:#c2ffc2";  
+        //     }
+        // });
+
+        // let username =document.getElementById("text");
+        // if(username.length <= 5){
+        //     document.getElementById("text").style.background="red";
+        // }
+
+        var a=0;
+        function mouseOver(){
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            
+            
+        }
+    </script>
+</body>
+</html>
