@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        #div1{
+            width: 250px;
+            height: 200px;
+            /* padding: 10px; */
+            border: 2px solid grey;
+        }
+        #div2{
+            width: 250px;
+            height: 200px;
+            /* padding: 10px; */
+            border: 2px solid grey;
+            margin-left: 300px;
+            margin-top: -225px;
+        }
+        #div3{
+            width: 250px;
+            height: 200px;
+            /* padding: 10px; */
+            border: 2px solid grey;
+            margin-left: 600px;
+            margin-top: -225px;
+        }
+        #div4{
+            width: 250px;
+            height: 200px;
+            /* padding: 10px; */
+            border: 2px solid grey;
+            margin-left: 900px;
+            margin-top: -200px;
+        ;
+        }
+        #div5{
+            width: 250px;
+            height: 200px;
+            /* padding: 10px; */
+            border: 2px solid grey;
+            margin-left: 1200px;
+            margin-top: -205px;
+        
+        }
+        #div6{
+            width: 250px;
+            height: 200px;
+            /* padding: 10px; */
+            border: 2px solid grey;
+            margin-top: 10px;
+        }
+        #div7{
+            width: 250px;
+            height: 200px;
+            /* padding: 10px; */
+            border: 2px solid grey;
+            margin-left: 300px;
+            margin-top: -202px;
+        }
+        #div8{
+            width: 250px;
+            height: 200px;
+            /* padding: 10px; */
+            border: 2px solid grey;
+            margin-left: 600px;
+            margin-top: -205px;
+        }
+        #div9{
+            width: 250px;
+            height: 200px;
+            /* padding: 10px; */
+            border: 2px solid grey;
+            margin-left: 900px;
+            margin-top: -200px;
+        ;
+        }
+        #div10{
+            width: 250px;
+            height: 200px;
+            /* padding: 10px; */
+            border: 2px solid grey;
+            margin-left: 1200px;
+            margin-top: -205px;
+        
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+ 
+        <h1 draggable="true" ondragstart="drag(event)" id="dragData1" style="font-size: 180px; color: aqua; align-items: center; display: flex; justify-content: center; margin-top: -1px;">A</h1>
+
+    </div><br>
+    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <h1 draggable="true" ondragstart="drag(event)" id="dragData2" style="font-size: 180px; color: aqua; align-items: center; display: flex; justify-content: center; margin-top: -1px; " >I</h1>
+
+    </div><br>
+    <div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <h1 draggable="true" ondragstart="drag(event)" id="dragData3" style="font-size: 180px; color: aqua; align-items: center; display: flex; justify-content: center; margin-top: -1px;" >T</h1>
+
+    </div>
+    <div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <h1 draggable="true" ondragstart="drag(event)" id="dragData4" style="font-size: 180px; color: aqua; align-items: center; display: flex; justify-content: center; margin-top: -1px;" >N</h1>
+
+    </div>
+    <div id="div5" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <h1 draggable="true" ondragstart="drag(event)" id="dragData5" style="font-size: 180px; color: aqua; align-items: center; display: flex; justify-content: center; margin-top: -1px;" >R</h1>
+    </div>
+    <div id="div6" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <h1 draggable="true" ondragstart="drag(event)" id="dragData6" style="font-size: 180px; color: aqua; align-items: center; display: flex; justify-content: center; margin-top: -1px;" >Y</h1>
+
+    </div>
+    <div id="div7" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <h1 draggable="true" ondragstart="drag(event)" id="dragData7" style="font-size: 180px; color: aqua; align-items: center; display: flex; justify-content: center; margin-top: -1px;" >Z</h1>
+
+    </div>
+    <div id="div8" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <h1 draggable="true" ondragstart="drag(event)" id="dragData8" style="font-size: 180px; color: aqua; align-items: center; display: flex; justify-content: center; margin-top: -1px;" >A</h1>
+
+    </div>
+    <div id="div9" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <h1 draggable="true" ondragstart="drag(event)" id="dragData9" style="font-size: 180px; color: aqua; align-items: center; display: flex; justify-content: center; margin-top: -1px;" >N</h1>
+
+    </div>
+    <div id="div10" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <br>
+    <!-- <img src="C:\Users\USER\Downloads\A.jpg" alt="aa"
+            id="dragData"
+            draggable="true"
+            ondragstart="drag(event)"
+            width="250"
+            height="200"> -->
+
+    <script>
+        function allowDrop(a){
+            a.preventDefault();
+        }
+
+        function drag(a){
+            a.dataTransfer.setData("text",a.target.id);
+        }
+
+        function drop(a){
+            a.preventDefault();
+            var b=a.dataTransfer.getData("text");
+            a.target.appendChild(document.getElementById(b));
+        }
+    </script>
+</body>
+</html>

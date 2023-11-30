@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resverse Number</title>
+</head>
+<body>
+    
+    <h1 id="numbr"></h1>
+    <script>
+        let value=parseInt(prompt("Enter a positive number"));
+        // let value=89;
+        let output="";
+        while(value>0){
+            output+=value%10;   
+            value=Math.floor(value/10);
+        }
+        document.getElementById("numbr").innerHTML="The reverse of input is :"+ output;
+    </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectbox</title>
+</head>
+<body>
+    <form >
+        <select id="main" onchange="fun1()">
+            <option hidden>SPORTS</option>
+            <option value="one" id="m2">Football</option>
+            <option value="two" id="m3">Cricket</option>
+            <option value="three" id="m4">Badminton</option>
+        </select><br><br>
+        <select id="sub1">
+            <option hidden id="s1">PLAYERS</option>
+            <option id="s2">Ronaldo</option>
+            <option id="s3">Messi</option>
+            <option id="s3">Neymer</option>
+            <option id="s4">Mbappe</option>
+        </select>
+        <select name="players 2" id="sub2">
+            <option hidden>PLAYERS</option>
+            <option >Virat Kohli</option>
+            <option >Ravindra Jadeja</option>
+            <option >MS Dhoni</option>
+            <option >Rohith Sharma</option>
+            
+        </select>
+        <select name="players 3" id="sub3">
+            <option  hidden>PLAYERS</option>
+            <option >Saina Nehwal</option>
+            <option >PV Sindhu</option>
+            <option >Prakash Padukone</option>
+            <option >Srikanth</option>
+
+        </select>
+    </form>
+    <script>
+        document.getElementById("sub1").style.display="none";
+        document.getElementById("sub2").style.display="none";
+        document.getElementById("sub3").style.display="none";
+
+        function fun1()
+        {
+            var a=document.getElementById("main").value;
+            var b=document.getElementById("m2").value;
+            var c=document.getElementById("m3").value;
+            var d=document.getElementById("m4").value;
+            if (a==b)
+            {
+                document.getElementById("sub1").style.display="block";
+                var box = document.getElementById("sub2");
+                box.selectedIndex = 0;
+                var box = document.getElementById("sub3");
+                box.selectedIndex = 0;
+            }
+            else{
+                document.getElementById("sub1").style.display="none";
+            }
+
+            if(a==c)
+            {
+                document.getElementById("sub2").style.display="block";
+                var box = document.getElementById("sub1");
+                box.selectedIndex = 0;
+                var box = document.getElementById("sub3");
+                box.selectedIndex = 0;
+            }
+            else{
+                document.getElementById("sub2").style.display="none";
+            }
+
+            if (a==d)
+            {
+                document.getElementById("sub3").style.display="block";
+                var box = document.getElementById("sub1");
+                box.selectedIndex = 0;
+                var box = document.getElementById("sub2");
+                box.selectedIndex = 0;
+            }
+            else{
+                document.getElementById("sub3").style.display="none";
+            }
+        }
+    </script>
+</body>
+</html>

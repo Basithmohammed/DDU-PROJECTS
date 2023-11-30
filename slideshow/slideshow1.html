@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slideshow1</title>
+</head>
+<body>
+    <center><img name="images" height="500px" width="70%"></center>
+    <script>
+        var i=0;
+        var img=[];
+        img[0]="eiffel-tower2.jpg";
+        img[1]="Statue-of-Liberty.jpg";
+        img[2]="Tajmahal.jpg";
+
+        // document.write=img;
+
+        function a(){
+            document.images.src=img[i];
+            if(i<img.length-1){
+                i++;
+            }else{
+                i=0;
+            }
+            setTimeout("a()", 1000);
+        }
+        a()
+    </script>
+</body>
+</html>

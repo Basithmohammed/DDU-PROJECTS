@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Location</title>
+</head>
+<body>
+    <button id="find-me" onclick="findme()" >Where am I now?</button><br/>
+    <p id="status"></p>
+    <p id="state"></p>
+    <a id="map-link" target="_blank"></a>
+    <script>
+        function findme(){
+            const status=document.getElementById("status");
+            const maplink=document.getElementById("map-link");
+
+            maplink.href="";
+            maplink.textContent="";
+        
+
+        function success(position){
+            const latitude=position.coords.latitude;
+            const longitude=position.coords.longitude;
+            status.textContent=latitude;
+            state.textContent=longitude;
+
+            maplink.href="http://www.google.com/maps/place/"+latitude+","+longitude;
+            maplink.textContent="click here to reach my location";
+        }
+
+        function error(){
+            status.textContent="Unable to retrive your location";
+        }
+
+        if(navigator.geolocation){
+            status.textContent="Loading.....";
+            navigator.geolocation.getCurrentPosition(success,error);
+        }
+        else{
+            status.textContent='geolaocation is not supported by your browser';
+        }
+    }
+    </script>
+</body>
+</html>

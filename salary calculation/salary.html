@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Salary</title>
+    <style>
+        .div-1{
+            width: 600px;
+            height: 650px;
+            margin-left: 400px;
+            border-radius: 10px;
+            background-color: lightblue;
+            margin-top: 50px;
+
+        }
+        .div-2{
+            width: 500px;
+            height: 300px;
+            background-color: lightgray;
+            margin-left: 50px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+        .div-1 input{
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            border-bottom-color: gray;
+            width: 250px;
+            margin-left:137px;
+            font-size: 15px;
+            text-align: center;
+            border-radius: 5px;
+            height: 30px;
+            margin-top: -23px;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+        }
+        .div-2 input{
+            margin-top: 25px;
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            border-bottom-color: gray;
+            width: 250px;
+            margin-left:55px;
+            font-size: 15px;
+            text-align: center;
+            border-radius: 5px;
+            height: 30px;
+        }
+        .div-2 label{
+            margin-left: 50px;
+        }
+        .div-1 label{
+            margin-top: 10px;
+            font-size: 18px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="div-1">
+        <form name="form-1" method="post" action="#" target="_self">
+            <h1 style="text-align: center;">Employee Monthly Salary Calculation</h1>
+            <label>Employee Name :</label>
+            <input type="text" id="text" placeholder="Enter Employee Name"><br>
+            <label>Employee Salary :</label>
+            <input type="number" id="salary" placeholder="Enter Salary Amount"><br>
+            <div class="div-2">
+                <label>EPF Amnt :</label>
+                <input type="number" id="epf" placeholder="Enter EPF Amount"><br>      
+                <label>Allowance :</label>
+                <input type="number" id="allowance" placeholder="Enter Allowance Amount" onchange="funname()"><br>
+                <label>Grosssalary :</label>
+                <input type="number" id="gross"><br>
+                <label>NetSalary :</label>
+                <input type="number" id="net"><br>
+                <button type="reset" onclick="clear()" style="width: 60px; height: 30px; margin-left: 380px; margin-top: 20px;">Clear</button>
+            </div> 
+        </form>
+    </div>
+    <script>
+        function funname(){
+            let a,b,c,d,e;
+
+            a=document.getElementById("salary").value;
+            b=document.getElementById("epf").value;
+            c=document.getElementById("allowance").value;
+            
+            a=parseInt(a);
+            b=parseInt(b);
+            c=parseInt(c);
+            d=a-b;
+            d=parseInt(d);
+            document.getElementById("gross").value=d;
+            e= d+c;
+            document.getElementById("net").value=e;   
+        }
+
+        function clear(){
+        var data = document.getElementById("form-1").value;
+         data.reset()
+      }
+    </script>
+</body>
+</html>

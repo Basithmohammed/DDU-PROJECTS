@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: #ffffff;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    background-color: #212121;
+}
+.display{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.display i{
+    position: absolute;
+    background-color: white;
+    width: 10px;
+    height: 100px;
+    border-radius: 8px;
+}
+#hand1{
+    margin-left: 50px;
+}
+#hand2{
+    margin-left: -70px;
+}
+
+#hand3{
+    rotate: 90deg;
+    margin-top: -100px;
+    margin-left: -60px;
+}
+#hand4{
+    rotate: 90deg;
+    margin-left: -60px;
+}
+
+#hand5{
+    margin-top: 105px;
+    margin-left: -70px;
+}
+
+#hand6{
+    margin-top: 105px;
+    margin-left: 50px;
+}
+
+#hand7{
+    rotate: 90deg;
+    margin-top: 105px;
+    margin-left: -60px;
+}

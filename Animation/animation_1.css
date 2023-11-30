@@ -1,0 +1,201 @@
+body{
+    background: rgb(65, 57, 57);
+    overflow: hidden;
+    font-family: 'Open Sans', sans-serif;
+}
+.container{
+    width: 300px;
+    height: 280px;
+    position: absolute;
+    top: calc(50% - 140px);
+    left: calc(50% - 150px);
+}
+.coffee_header{
+    width: 100%;
+    height: 80px;
+    background-color: #022030;
+    border-radius: 10px;
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+}
+.coffee_header_button{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 25px;
+    left: calc(50% - 25px);
+    background-color: #9acfc5;
+    border-radius: 50%;
+    border: 5px solid #43beae;
+}
+.coffee_medium{
+    width: 90%;
+    height: 160px;
+    position: absolute;
+    top: 80px;
+    left: calc(50% - 45%);
+    background-color: white;
+}
+.coffee_medium1{
+    width: 80px;
+    height: 30px;
+    position: absolute;
+    background-color: black;
+    left: 90px;
+}
+.coffee_medium2{
+    width: 60px;
+    height: 20px;
+    position: absolute;
+    background-color: black;
+    left: 100px;
+    top: 25px;
+    border-radius:5px ;
+}
+.coffee_medium3{
+    width: 15px;
+    height: 25px;
+    background-color: black;
+    position: absolute;
+    left: 123px;
+    top: 40px;
+    border-radius:5px ;
+}
+.coffee_medium4{
+    width: 25px;
+    height: 10px;
+    background-color: black;
+    position: absolute;
+    left: 160px;
+    top: 10px; 
+}
+
+.coffee_medium5{
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    position: absolute;
+    left: 180px;
+    top: 5px; 
+    border-radius: 50%;
+}
+
+
+.coffee_drop1 {
+    width: 6px;
+    height: 58px;
+    opacity: 0;
+    position: absolute;
+    margin-top: -102px;
+    margin-left: 128px;
+    background-color: #74372b;
+    animation: liquid 2s 2s linear infinite;
+  }
+  @keyframes liquid {
+    0% {
+      height: 0px;  
+      opacity: 1;
+    }
+    5% {
+      height: 0px;  
+      opacity: 1;
+    }
+    20% {
+      height: 58px;  
+      opacity: 1;
+    }
+    95% {
+      height: 58px;
+      opacity: 1;
+    }
+    100% {
+      height: 58px;
+      opacity: 0;
+    }
+  }
+  .smoke {
+    width: 5px;
+    height: 15px;
+    position: absolute;  
+    border-radius: 8px;
+    background-color:#524a4a;
+  }
+
+
+.one{
+    opacity: 0;
+    bottom: 50px;
+    left: 108px;
+    animation: smokeOne 3s 4s linear infinite;
+}
+.four {
+    opacity: 0;
+    bottom: 50px;
+    right: 128px;
+    animation: smokeOne 3s 5s linear infinite;
+  }
+@keyframes smokeOne {
+    0% {
+      bottom: 35px;
+      opacity: 0;
+    }
+    40% {
+      bottom: 50px;
+      opacity: .3;
+    }
+    80% {
+      bottom: 80px;
+      opacity: .2;
+    }
+    100% {
+      bottom: 80px;
+      opacity: 0;
+    }
+  }
+
+  .two {
+    opacity: 0;
+    bottom: 70px;
+    left: 118px;
+    animation: smokeTwo 3s 5s linear infinite;
+  }
+  .three {
+    opacity: 0;
+    bottom: 65px;
+    right: 118px;
+    animation: smokeTwo 3s 6s linear infinite;
+  }
+  @keyframes smokeTwo {
+    0% {
+      bottom: 40px;
+      opacity: 0;
+    }
+    40% {
+      bottom: 70px;
+      opacity: .3;
+    }
+    80% {
+      bottom: 80px;
+      opacity: .2;
+    }
+    100% {
+      bottom: 80px;
+      opacity: 0;
+    }
+  }
+
+
+
+
+
+
+.coffee_footer{
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    top: 240px;
+    left: calc(50% - 50%);
+    background-color: #022030;
+    border-radius: 7px;
+}
